@@ -25,10 +25,10 @@ def test_s2():
     print("用例2：搜索python2")
 
 
-
+@pytest.mark.skip
 def test_3(open):
 
-    print("用例1：搜索python1")
+    print("用例1：搜索python3")
 
 
 

@@ -37,7 +37,54 @@ def test_function():
 if not vaild_config():
 
 pytest.skip("unsupported configuration")
+           （写失败原因）
+
 
 '''
+
+'''
+
+也可以使用pytest.skip（reason，allow_module_level=True）跳过整个模块级别：
+                    (reason:跳过的原因)
+
+import pytest
+
+if not pytest.config.getoption("-- custom-flag"):
+
+pytest.skip("--custom -flag is missing, skipping tests",allow_module_lever =True)
+
+'''
+
+
+'''
+
+如果希望有条件地跳过某些内容，则可以使用skipif代替。
+
+标记测试的示例在python3.6之前的解释器上运行时要跳过的函数
+
+import sys
+
+@pytest.mark.skipid(sys.version_info<(3.6),reason="requires python 3.6 or higher")
+
+def test_function():
+
+
+'''
+
+
+
+
+'''
+
+skip类或模块
+
+
+
+'''
+
+
+
+
+
 
 
